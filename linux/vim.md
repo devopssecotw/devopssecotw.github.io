@@ -14,6 +14,18 @@
 #### “ Jump back to where you just were
 #### ctrl+o ctrl+i Move backward/forward through the jump history
 ### Editing 
+#### i a I A insert at cursor/append after cursor/insert at beginning of line/append to end of line
+#### o O Open new line 
+#### cw cW Correct the token(s)/word(s)
+#### cc  Correct line
+#### dd Delete line
+#### s Delete character 
+#### yy Copy line
+#### yw yW Copy token(s)/word(s)
+#### p P Paste the last thing that was deleted or copied
+#### u ctrl+r Undo and redo
+#### .  period. Repeat the previous edit command
+#### 
 #### 
 
 ## commands 
