@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.2.0/dist/style.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@6.7.0"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.2.7"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.2.0/dist/index.umd.min.js"></script><script>(r => {
+                setTimeout(r);
+              })(() => {
+  const {
+    markmap,
+    mm
+  } = window;
+  const toolbar = new markmap.Toolbar();
+  toolbar.attach(mm);
+  const el = toolbar.render();
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, data) => {
+        const {
+          Markmap
+        } = getMarkmap();
+        window.mm = Markmap.create('svg#mindmap', getOptions == null ? void 0 : getOptions(), data);
+      })(() => window.markmap,null,{"t":"heading","d":1,"p":{"lines":[0,1]},"v":"道路交通安全违法行为记分管理办法","c":[{"t":"heading","d":2,"p":{"lines":[1,2]},"v":"公安部令第163号","c":[{"t":"heading","d":3,"p":{"lines":[2,3]},"v":"2022年4月1日起施行"},{"t":"heading","d":3,"p":{"lines":[3,4]},"v":"仅列举家用轿车相关规定"}]},{"t":"heading","d":2,"p":{"lines":[4,5]},"v":"主要注意事项：不饮酒；不超速；不闯红灯；不接打电话；不逆行；礼让行人"},{"t":"heading","d":2,"p":{"lines":[5,6]},"v":"记分分值","c":[{"t":"heading","d":3,"p":{"lines":[6,7]},"v":"一次记12分","c":[{"t":"heading","d":4,"p":{"lines":[7,8]},"v":"饮酒后驾驶"},{"t":"heading","d":4,"p":{"lines":[8,9]},"v":"造成致人轻伤以上或者死亡的交通事故后逃逸"},{"t":"heading","d":4,"p":{"lines":[9,10]},"v":"使用伪造、变造的机动车号牌、行驶证、驾驶证"},{"t":"heading","d":4,"p":{"lines":[10,11]},"v":"驾驶其他载客汽车载人超过核定人数百分之百以上"},{"t":"heading","d":4,"p":{"lines":[11,12]},"v":"驾驶其他机动车在高速公路、城市快速路上行驶超过规定时速百分之五十以上"},{"t":"heading","d":4,"p":{"lines":[12,13]},"v":"高速公路、城市快速路上倒车、逆行、穿越中央分隔带掉头"},{"t":"heading","d":4,"p":{"lines":[13,14]},"v":"代替实际机动车驾驶人接受交通违法行为处罚和记分"}]},{"t":"heading","d":3,"p":{"lines":[14,15]},"v":"一次记9分","c":[{"t":"heading","d":4,"p":{"lines":[15,16]},"v":"高速公路或者城市快速路上违法停车的；"},{"t":"heading","d":4,"p":{"lines":[16,17]},"v":"未悬挂机动车号牌或者故意遮挡、污损机动车号牌的机动车"},{"t":"heading","d":4,"p":{"lines":[17,18]},"v":"驾驶与准驾车型不符的机动车的"}]},{"t":"heading","d":3,"p":{"lines":[18,19]},"v":"一次记6分","c":[{"t":"heading","d":4,"p":{"lines":[19,20]},"v":"驾驶其他载客汽车载人超过核定人数百分之五十以上未达到百分之百的"},{"t":"heading","d":4,"p":{"lines":[20,21]},"v":"高速公路、城市快速路上行驶超过规定时速百分之二十以上未达到百分之五十; 以外的道路上行驶超过规定时速百分之五十以上"},{"t":"heading","d":4,"p":{"lines":[21,22]},"v":"不按交通信号灯指示通行的"},{"t":"heading","d":4,"p":{"lines":[22,23]},"v":"驾驶证被暂扣或者扣留期间驾驶机动车的"},{"t":"heading","d":4,"p":{"lines":[23,24]},"v":"造成致人轻微伤或者财产损失的交通事故后逃逸"},{"t":"heading","d":4,"p":{"lines":[24,25]},"v":"在高速公路或者城市快速路上违法占用应急车道行驶的"}]},{"t":"heading","d":3,"p":{"lines":[25,26]},"v":"一次记3分","c":[{"t":"heading","d":4,"p":{"lines":[26,27]},"v":"载人超过核定人数百分之二十以上未达到百分之五十的"},{"t":"heading","d":4,"p":{"lines":[27,28]},"v":"高速公路、城市快速路以外的道路上行驶超过规定时速百分之二十以上未达到百分之五十的"},{"t":"heading","d":4,"p":{"lines":[28,29]},"v":"高速公路或者城市快速路上不按规定车道行驶的"},{"t":"heading","d":4,"p":{"lines":[29,30]},"v":"不按规定超车、让行，或者在高速公路、城市快速路以外的道路上逆行的"},{"t":"heading","d":4,"p":{"lines":[30,31]},"v":"遇前方机动车停车排队或者缓慢行驶时，借道超车或者占用对面车道、穿插等候车辆的；"},{"t":"heading","d":4,"p":{"lines":[31,32]},"v":"有拨打、接听手持电话等妨碍安全驾驶的行为的"},{"t":"heading","d":4,"p":{"lines":[32,33]},"v":"行经人行横道不按规定减速、停车、避让行人的；"},{"t":"heading","d":4,"p":{"lines":[33,34]},"v":"不按规定避让校车的；"},{"t":"heading","d":4,"p":{"lines":[34,35]},"v":"不按规定安装机动车号牌的机动车上道路行驶的"},{"t":"heading","d":4,"p":{"lines":[35,36]},"v":"发生故障、事故停车后，不按规定使用灯光或者设置警告标志的"},{"t":"heading","d":4,"p":{"lines":[36,37]},"v":"在高速公路上行驶低于规定最低时速的"}]},{"t":"heading","d":3,"p":{"lines":[37,38]},"v":"一次记1分","c":[{"t":"heading","d":4,"p":{"lines":[38,39]},"v":"不按规定会车，或者在高速公路、城市快速路以外的道路上不按规定倒车、掉头的；"},{"t":"heading","d":4,"p":{"lines":[39,40]},"v":"不按规定使用灯光的；"},{"t":"heading","d":4,"p":{"lines":[40,41]},"v":"违反禁令标志、禁止标线指示的；"},{"t":"heading","d":4,"p":{"lines":[41,42]},"v":"未按规定定期进行安全技术检验"},{"t":"heading","d":4,"p":{"lines":[42,43]},"v":"机动车驾驶人未按规定系安全带的"}]}]},{"t":"heading","d":2,"p":{"lines":[43,44]},"v":"记分减免","c":[{"t":"heading","d":3,"p":{"lines":[44,45]},"v":"安全教育并达到规定要求,最高扣减6分","c":[{"t":"heading","d":4,"p":{"lines":[45,46]},"v":"网上学习三日内累计满三十分钟且考试合格的，一次扣减1分"},{"t":"heading","d":4,"p":{"lines":[46,47]},"v":"现场学习满一小时且考试合格的，一次扣减2分。"},{"t":"heading","d":4,"p":{"lines":[47,48]},"v":"交通安全公益活动的，满一小时为一次，一次扣减1分。"}]}]}]})</script>
+</body>
+</html>
