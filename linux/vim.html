@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.2.0/dist/style.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@6.7.0"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.2.7"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.2.0/dist/index.umd.min.js"></script><script>(r => {
+                setTimeout(r);
+              })(() => {
+  const {
+    markmap,
+    mm
+  } = window;
+  const toolbar = new markmap.Toolbar();
+  toolbar.attach(mm);
+  const el = toolbar.render();
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, data) => {
+        const {
+          Markmap
+        } = getMarkmap();
+        window.mm = Markmap.create('svg#mindmap', getOptions == null ? void 0 : getOptions(), data);
+      })(() => window.markmap,null,{"t":"heading","d":1,"p":{"lines":[0,1]},"v":"vim","c":[{"t":"heading","d":2,"p":{"lines":[2,3]},"v":"Basic cheat sheet","c":[{"t":"heading","d":3,"p":{"lines":[3,4]},"v":"Movement","c":[{"t":"heading","d":4,"p":{"lines":[4,5]},"v":"h j k l","c":[{"t":"heading","d":5,"p":{"lines":[5,6]},"v":"10j"}]},{"t":"heading","d":4,"p":{"lines":[6,7]},"v":"b w B W  Move back by token/forward by token/back by word/forward"},{"t":"heading","d":4,"p":{"lines":[7,8]},"v":"0 ^ $    first column/first non-whitespace character/end of line"},{"t":"heading","d":4,"p":{"lines":[8,9]},"v":"ctrl+u ctrl+d  Page Up and Page Down"},{"t":"heading","d":4,"p":{"lines":[9,10]},"v":"line-number&gt;G  Jump directly to a specific line number"},{"t":"heading","d":4,"p":{"lines":[10,11]},"v":"H M L top/middle/bottom of the screen"},{"t":"heading","d":4,"p":{"lines":[11,12]},"v":"# *  Find the previous/next occurrence"},{"t":"heading","d":4,"p":{"lines":[12,13]},"v":"n N Repeat the last find command forward/backward."},{"t":"heading","d":4,"p":{"lines":[13,14]},"v":"“ Jump back to where you just were"},{"t":"heading","d":4,"p":{"lines":[14,15]},"v":"ctrl+o ctrl+i Move backward/forward through the jump history"}]},{"t":"heading","d":3,"p":{"lines":[15,16]},"v":"Editing","c":[{"t":"heading","d":4,"p":{"lines":[16,17]},"v":"i a I A insert at cursor/append after cursor/insert at beginning of line/append to end of line"},{"t":"heading","d":4,"p":{"lines":[17,18]},"v":"o O Open new line"},{"t":"heading","d":4,"p":{"lines":[18,19]},"v":"cw cW Correct the token(s)/word(s)"},{"t":"heading","d":4,"p":{"lines":[19,20]},"v":"cc  Correct line"},{"t":"heading","d":4,"p":{"lines":[20,21]},"v":"dd Delete line"},{"t":"heading","d":4,"p":{"lines":[21,22]},"v":"s Delete character"},{"t":"heading","d":4,"p":{"lines":[22,23]},"v":"yy Copy line"},{"t":"heading","d":4,"p":{"lines":[23,24]},"v":"yw yW Copy token(s)/word(s)"},{"t":"heading","d":4,"p":{"lines":[24,25]},"v":"p P Paste the last thing that was deleted or copied"},{"t":"heading","d":4,"p":{"lines":[25,26]},"v":"u ctrl+r Undo and redo"},{"t":"heading","d":4,"p":{"lines":[26,27]},"v":".  period. Repeat the previous edit command"},{"t":"heading","d":4,"p":{"lines":[27,28]},"v":""},{"t":"heading","d":4,"p":{"lines":[28,29]},"v":""}]}]},{"t":"heading","d":2,"p":{"lines":[30,31]},"v":"commands","c":[{"t":"heading","d":3,"p":{"lines":[31,32]},"v":"Insert mode"},{"t":"heading","d":3,"p":{"lines":[32,33]},"v":"Command mode / visual mode","c":[{"t":"heading","d":4,"p":{"lines":[33,34]},"v":"x - to delete the unwanted character"},{"t":"heading","d":4,"p":{"lines":[34,35]},"v":"u - to undo the last the command and U to undo the whole line"},{"t":"heading","d":4,"p":{"lines":[35,36]},"v":"A - to append text at the end"},{"t":"heading","d":4,"p":{"lines":[36,37]},"v":":wq - to save and exit; :w - to sav"},{"t":"heading","d":4,"p":{"lines":[37,38]},"v":":q! - to trash all changes"},{"t":"heading","d":4,"p":{"lines":[38,39]},"v":"2w - to move the cursor two words forward."},{"t":"heading","d":4,"p":{"lines":[39,40]},"v":"3e - to move the cursor to the end of the third word forward"},{"t":"heading","d":4,"p":{"lines":[40,41]},"v":"0 (zero) to move to the start of the line."},{"t":"heading","d":4,"p":{"lines":[41,42]},"v":"d2w - which deletes 2 words"},{"t":"heading","d":4,"p":{"lines":[42,43]},"v":"dd to delete the line and 2dd to delete to line"},{"t":"heading","d":4,"p":{"lines":[43,44]},"v":"$ (to the end of line"},{"t":"heading","d":4,"p":{"lines":[44,45]},"v":"p to paste"},{"t":"heading","d":4,"p":{"lines":[45,46]},"v":"r - to replace the letter"},{"t":"heading","d":4,"p":{"lines":[46,47]},"v":"ce - deletes the word and places you in Insert mode"},{"t":"heading","d":4,"p":{"lines":[47,48]},"v":"G - to move you to the bottom of the file"},{"t":"heading","d":4,"p":{"lines":[48,49]},"v":"gg - to move you to the start of the file."},{"t":"heading","d":4,"p":{"lines":[49,50]},"v":"number of the line you were on"},{"t":"heading","d":4,"p":{"lines":[50,51]},"v":":s/old/new/g to substitute 'new' for 'old' where g is globally"},{"t":"heading","d":4,"p":{"lines":[51,52]},"v":"/ backward search"},{"t":"heading","d":4,"p":{"lines":[52,53]},"v":"? forward search"},{"t":"heading","d":4,"p":{"lines":[53,54]},"v":"v - starts visual mode for selecting"},{"t":"heading","d":4,"p":{"lines":[54,55]},"v":"R - to replace more than one character"},{"t":"heading","d":4,"p":{"lines":[55,56]},"v":"y - operator to copy text using v visual mode and p to paste it"},{"t":"heading","d":4,"p":{"lines":[56,57]},"v":"o - opens a line below the cursor"},{"t":"heading","d":4,"p":{"lines":[57,58]},"v":"O - opens a line above"},{"t":"heading","d":4,"p":{"lines":[58,59]},"v":"a - inserts text"},{"t":"heading","d":4,"p":{"lines":[59,60]},"v":"e - command moves to the end"}]}]}]})</script>
+</body>
+</html>
