@@ -22,6 +22,18 @@
 - ln soft link
 ### SYSTEM INFORMATION
 
+- uname -a # Display Linux system information
+- uname -r # Display kernel release information
+- cat /etc/redhat-release # Show which version of Red Hat installed
+- uptime # Show which version of Red Hat installed
+- hostname # Show which version of Red Hat installed
+- hostname -I # Show which version of Red Hat installed
+- last reboot # Show which version of Red Hat installed
+- date # Show which version of Red Hat installed
+- cal # Show which version of Red Hat installed
+- w # Show which version of Red Hat installed
+- whoami # Show which version of Red Hat installed
+
 ### File Permission commands
 - ls -l	to show file type and access permission
 - r	read permission
