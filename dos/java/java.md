@@ -28,8 +28,117 @@ JVM together with the Java Class Libraries makes up the JRE.
 
 Since the finalize function is contained in the Object class and Object is the superclass of all Java classes, the finalize method is available to all Java classes. As a result, the garbage collector may invoke the finalise function on any java object. We must override the finalize method present in the Object class to specify our own clean-up activities since the finalize function in the Object class has an empty implementation
 
+2. Java Basics
+- object - An object is an entity with state and behaviour, such as a chair, a bike, a marker, a pen, a table, a car, and so on. It could be either physical or logical (tangible or intangible). The financial system is an example of an intangible object
+- three characteristics of an object
+State: The data (value) of an object is represented by its state.
+Behaviour: The functionality of an object, such as deposit, withdrawal, and so on, is represented by the term behaviour.
+Identity: A unique ID is often used to represent an object’s identification. The value of the ID is hidden from the outside user. The JVM uses it internally to uniquely identify each object.
+- class - A class is a collection of objects with similar attributes. It’s a blueprint or template from which objects are made. It’s a logical thing. It can’t be physical. In Java, a class definition can have the following elements:
+Modifiers: A class can be private or public, or it can also have a default access level
+class keyword: To construct a class, we use the class keyword.
+class name: The name of the class should usually start with a capital letter.
+Superclass (optional): If the class has any superclass, we use the extends keyword and we mention the name of the superclass after the class name.
+Interface (optional): If the class implements an interface, we use the implements keyword followed by the name of the interface after the class name.
+- Constructors: A constructor in Java is a block of code that is comparable to a method. When a new instance of the class is created, the constructor is invoked. It is only when the constructor is invoked that memory for the object is allocated.
+- 
+  ```
+      keyword - Reserved words are another name for Java keywords. Keywords are specific terms that have special meanings. Because these are Java’s predefined words, they can’t be used as variable, object, or class names. Following is the list of keywords used in Java:-
+    Keyword	Use Case
+    boolean	The boolean keyword in Java is used to declare a variable to be of the boolean type. It can only store True and False values.
+    byte	The byte keyword in Java is used to create a variable that can handle 8-bit data values.
+    break	The break keyword in Java is used to end a loop or switch statement. It interrupts the program’s current flow when certain circumstances are met.
+    abstract	The abstract keyword in Java is used to declare an abstract class.
+    case	The case keyword in Java is used with switch statements to mark text blocks.
+    try	The try keyword in Java is used to begin a block of code that will be checked for errors. Either a catch or a finally block must come after the try block.
+    short	The Java short keyword is used to declare a variable with a 16-bit integer capacity.
+    void	The void keyword in Java is used to indicate that a method has no return value.
+    static	The static keyword is used to denote a class method or a class variable in Java.
+    synchronized	In multithreaded programming, the synchronized keyword is used to designate the critical sections or functions.
+    super	The super keyword in Java is a reference variable that refers to parent class objects. It can be used to call the method of the immediate parent class.
+    volatile	The volatile keyword in Java is used to signal that a variable might change asynchronously.
+    while	The while keyword in Java is used to initiate a while loop. This loop repeats a section of the program many times. The while loop is recommended if the number of iterations is not predetermined.
+    catch	The catch keyword in Java is used to capture exceptions thrown by try statements. It can only be used after the try block.
+    char	Declare a variable that can hold unsigned 16-bit Unicode characters with the char keyword.
+    class	To declare a class in Java, use the class keyword.
+    continue	The continue keyword in Java is used to keep the loop going by continuing the program’s current flow while skipping the remaining code at the specified circumstance.
+    default	The default keyword in Java can be used to define a default block of code in a switch statement. It can also be used as a default access modifier.
+    do	The do keyword in Java is used to declare a loop in the control statement. It can repeat a section of the program multiple times.
+    double	The double keyword in Java is used to create a variable that can hold a 64-bit floating-point number.
+    else	In an, if statement, the else keyword in Java is used to represent alternate branches.
+    enum	The enum keyword in Java is used to specify a set of fixed constants.
+    extends	The extends keyword in Java is used to show that a class is inherited from another class or interface.
+    final	
+    The final keyword in Java can be used with variables, methods and classes. 
+    When used with a variable, the value of the variable becomes constant. Any modifications in the variable’s value at a later stage leads to a compilation error.
+    When used with a method, the method cannot be overridden in the classes that extend the given class.
+    When used with a class, the class becomes noninheritable.
+    finally	In a try-catch structure, the finally keyword denotes a code block. Whether or not an exception is handled, this block is always run.
+    float	The float keyword in Java is used to create a variable that can carry a 32-bit floating-point value.
+    for	The for keyword in Java is used to begin a for loop. When a condition is met, it is used to repeatedly execute a set of instructions/functions.
+    if	The if keyword in Java is used to test a condition. If the condition is true, the if block is executed.
+    implements	The keyword implements is used in Java to implement an interface.
+    import	The import keyword in Java makes classes and interfaces available to the current source code.
+    throw	The throw keyword in Java is used to throw an exception explicitly. Throwing custom exceptions is the most common use of the throw keyword.
+    this	The this keyword is used to refer to the current object in the method or the constructor of the class.
+    throws	The throws keyword in Java is used to declare an exception. throws can be used to propagate checked exceptions.
+    instanceof	The instanceof keyword in Java is used to determine whether an object is an instance of a given class or implements an interface.
+    int	The int keyword in Java is used to declare a variable that can hold a signed 32-bit integer.
+    interface	The interface keyword in Java is used to declare an interface.
+    long	The long keyword in Java is used to specify a variable that may store a 64-bit integer.
+    native	The Java native keyword indicates that a method is implemented using JNI (Java Native Interface) in native code.
+    new	The new keyword in Java is used to create new objects.
+    null	The null keyword in Java is used to indicate that a reference refers to nothing.
+    private	The private keyword in Java is an access modifier. It’s used to say that a method or variable can only be accessible in the class where it’s declared.
+    protected	The protected keyword in Java is an access modifier. It can be accessed both within and outside the package, but only through inheritance.
+    public	The public keyword in Java is an access modifier. It’s a term meaning anything can be found anyplace. Among all the modifiers, it has the broadest application.
+    return	When a method’s execution is complete, the Java return keyword is used to exit the method.
+  ```
+3. Variables in Java
+- Types of variables:
+Local variable - A local variable is a variable defined within a block, method, or constructor. These variables have a scope that is limited to the block in which they are defined. i.e., these variables are only accessible within that block.
+Instance variable - Variables that are declared inside a class without the ‘static’ keyword are referred to as instance variables. Instance variables are replicated for every object of the class being created.
+Static variable - Variables that are declared inside a class with the ‘static’ keyword are referred to as static variables. Static variables are shared by all the objects of the class and are not replicated. Static variables are created at the start of program execution and automatically destroyed when the program is finished. It is not necessary to initialise a static variable. It has a value of 0 by default.
+
+4. Datatypes in Java
+- Primitive Data Types
+- 
+  ```
+      Data Type	Default Size	Description
+    boolean	1 bit	Only two potential values are stored in the Boolean data type: true and false. Simple flags that track true/false circumstances are stored in this data type.
+    char	2 byte	A single 16-bit Unicode character is represented by the char data type. It has a value range of ‘\u0000’ (or 0) to ‘\uffff’ (or 65,535 inclusive).
+    byte	1 byte	It’s an 8-bit two-s complement signed integer. It has a value range of -128 to 127. (inclusive). It has a value of 0 by default. The byte data type is used to preserve memory in huge arrays where space is at a premium. Because a byte is four times smaller than an integer, it saves space.
+    short	2 bytes	A 16-bit signed two’s complement integer is the short data type. It has a value range of -32,768 to 32,767. (inclusive). It has a value of 0 by default.
+    int	4 bytes	A 32-bit signed two’s complement integer is represented by the int data type. Its range of values is (-2^31) to (2^31 -1)(inclusive).
+    long	8 bytes	A 64-bit two’s complement integer is the long data type. It has a value range of (-2^63) to (2^63 -1)(inclusive).
+    float	4 bytes	The float data type is a 32-bit IEEE 754 floating-point with single precision. If you need to preserve memory in big arrays of floating point integers, use a float (rather than a double).
+    double	8 bytes	A double data type is a 64-bit IEEE 754 floating-point with double precision. Like float, the double data type is commonly used for decimal values. For precise values, such as currency, the double data type should never be utilised. 0.0d is the default value.
+  ```
 
 #### part 2
+5. Java Keywords
+- a) Understanding the this keyword in Java:
+this: to refer to the current instance variable of the class
+this: to call the method of the current class
+this() is used to call the constructor of the current class
+this: to use as a parameter in a method
+this keyword can be used to get the current instance of a class
+- b) final keyword in Java:
+Final Variables:
+Final Classes:
+Final Methods:
+- c) static keyword in Java:
+Static Blocks:
+Static Variables:
+Static Methods:
+Static Classes:
+- d) super keyword in Java: 
+Using super with variables:
+Using super with methods:
+
+6. Java Comments
+- Single line comments:  // 
+- Multiline comments:
 
 
 #### part 3
@@ -43,6 +152,8 @@ Since the finalize function is contained in the Object class and Object is the s
 
 
 #### part 6
+
+
 
 ### JVM options java8
 #### Available combinations of garbage collection algorithms in HotSpot JVM
