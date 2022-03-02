@@ -138,14 +138,259 @@ Using super with methods:
 
 6. Java Comments
 - Single line comments:  // 
-- Multiline comments:
+- Multiline comments: /**/
+- JavaDoc:/** */
+
+7. Access Modifiers in Java
+- private: A private modifier’s access level is restricted to members of the class. It isn’t accessible outside of the class.
+  default: A default modifier’s access level is limited to the package. It’s not possible to get to it from outside the package. If you don’t indicate an access level, the default will be used.
+  protected: A protected modifier’s access level is both within and outside the package via a child class.
+  public: A public modifier’s access level is universal. It can be accessed from within and outside the class, and from within and outside the package.
+8. Operators in Java
+-     Operator Type	Description	Operators
+  Unary Operators	Only one operand is required for unary operators. They are used to increase, decrease, or negate a value.	++, --, +, -, !
+  Arithmetic Operators	Simple arithmetic operations on primitive data types are performed with them.	+, – , *, / , %
+  Assignment Operators	The assignment operator is used to give any variable a value. It has right-to-left associativity, which means that the value given on the right-hand side of the operator is assigned to the variable on the left. As a result, the right-hand side value must be declared before use or be a constant.	=, +=, -=, *=, /=, %=, &=, ^=,
+  Relational Operators	These operators are used to verify for equality, greater than, and less than relationships. They return a boolean result following comparison and are frequently used in looping and conditional if-else statements.	>, <, >=, <=, ==, !=
+  Logical Operators	These operators conduct “logical AND” and “logical OR” operations, which are analogous to the AND and OR gates in digital electronics. One point to bear in mind is that if the first condition is false, the second condition is not examined, resulting in a short-circuiting effect. Used to test for a variety of variables before making a choice.	&&, ||
+  Ternary Operator	The ternary operator is a condensed form of the if-else expression. The name ternary comes from the fact that it has three operands.	?:
+  Bitwise Operators	These operators are used to manipulate the bits of a number individually. They can be applied to any integer type. They’re used to do Binary indexed tree updates and query operations.	&, |, ^
+  Shift Operators	These operators shift the bits of a number to the left or right, multiplying or dividing it by two, accordingly. When we need to multiply or divide a number by two, we can use them.	<<, >>, >>>
+
+- Precedence and Associativity of operators in Java
+  Operators	Associativity	Type
+  ++, –	Right to Left	Unary postfix
+  ++, --, +, -, !	Right to Left	Unary prefix
+  /, *, %	Left to Right	Multiplicative
+  +, -	Left to Right	Additive
+  <, <=, >, >=	Left to Right	Relational
+  ==, !==	Left to Right	Equality
+  &	Left to Right	Boolean Logical AND
+  ^	Left to Right	Boolean Logical Exclusive OR
+  |	Left to Right	Boolean Logical Inclusive OR
+  &&	Left to Right	Conditional AND
+  ||	Left to Right	Conditional OR
+  ?:	Right to Left	Conditional
+  =, +=, -=, *=, /=, %=	Right to Left	Assignment
+
+9. Identifiers in Java
+   Rules for defining Java identifiers:-
+
+A proper Java identifier must follow certain guidelines. If we don’t follow these guidelines, we’ll get a compile-time error. These criteria apply to other languages as well, such as C and C++.
+All alphanumeric characters ([A-Z],[a-z],[0-9]), ‘$’ (dollar symbol), and ‘_’ are the only characters that can be used as identifiers (underscore). For example, “bit@” is not an acceptable Java identifier because it contains the special character ‘@,’.
+Numbers should not be used to begin identifiers ([0-9]). “123geeks,” for example, is not a valid Java identifier.
+Case matters when it comes to Java Identifiers. For example ‘bit’ and ‘BIT’ would be considered as different identifiers in Java.
+The length of the identifier is not limited, however, it is recommended that it be kept to a maximum of 4–15 letters.
+Reserved Words aren’t allowed to be used as identifiers. Because while is a reserved term, “int while = 20;” is an incorrect sentence. In Java, there are 53 reserved terms.
+The length of the identifier is not limited, however, it is recommended that it be kept to a maximum of 4–15 letters.
+Reserved words: 
+
+10. Control Flow in Java
+- Decision-Making Statements:
+- If Statement / if-else / if-else-if ladder / Nested if-statement
+- Switch Statement
+- Loop Statements: For Loop / While Loop / Do While Loop
+- Jump Statements: break statement / continue statement
+
+11. Java Packages
+- Built-in Packages:
+- java.lang: This package contains language-specific classes (e.g classes that define primitive data types, maths operations). This package will be imported automatically.
+  java.io: This package contains classes that handle input and output operations.
+  java.util: This package contains utility classes that provide data structures such as Linked Lists, Dictionary, and Date/Time operations.
+  java.applet: This package contains Applet-related classes.
+  java.awt: Contains classes for implementing graphical user interface components (like buttons, menus etc).
+  java.net: This package contains classes that help with networking
+
+12. Java Methods
+    Method Declaration:- Method properties such as visibility, return type, name, and parameters are all stated in the method declaration. As seen in the following diagram, it consists of six components known as method headers.
+    Method signature - A method signature is a statement that identifies a method. It’s included in the method declaration. It contains the method name as well as a list of parameters.
+
+- Access Specifier - The method’s access specifier, also known as a modifier, determines the method’s access type. It specifies the method’s visibility. There are four different types of access specifiers in Java:
+public: When we utilise the public specifier in our application, all classes can access the method.
+private: The method is only accessible in the classes in which it is declared when we use a private access specifier.
+protected: The method is accessible within the same package or subclasses in a different package when we use the protected access specifier.
+default: When no access specifier is specified in the method declaration, Java uses the default access specifier. It can only be seen from the same package.
+- Return Type - The data type that the method returns is known as the return type. It could be a primitive data type, an object, a collection, or void, for example. The void keyword is used when a method does not return anything.
+- Method name - The name of a method is defined by its method name, which is a unique name. It must be appropriate for the method’s functionality. If we’re making a method for subtracting two numbers, the name of the method must be subtraction (). The name of a method is used to call it.
+- Parameter List - The parameter list is a collection of parameters separated by a comma and wrapped in parentheses. It specifies the data type as well as the name of the variable. Leave the parenthesis blank if the method has no parameters.
+- Method body - The method declaration includes a section called the method body. It contains all of the actions that must be completed. It is protected by a pair of curly braces
+
+
+
+
 
 
 #### part 3
+13. Java Polymorphism
+- Compile-time Polymorphism: Compile-time polymorphism is also known as static polymorphism. In Java, this is achieved by function overloading.
+- Method Overloading: When there are numerous functions with the same name but distinct parameters, this is referred to as overloading. Changes in the number of arguments or the kind of arguments can cause functions to become overloaded.
+-Runtime Polymorphism:
+Runtime polymorphism, often known as Dynamic Method Dispatch, is a technique for resolving calls to overridden methods at runtime rather than at compile time. A superclass's reference variable is used to call an overridden method in this process. The object referred to by the reference variable is used to determine which method should be called.
+
+14. Java Inheritance
+    Subclasses/Child Classes: A subclass is a class that inherits from another. A derived class, extended class, or kid class is another name for it.
+    Superclasses: A superclass (sometimes known as a parent class) is the class from which a subclass derives its features. It's also known as a parent class or a base class.
+- Types of inheritance in Java:
+
+1. Single Inheritance - Subclasses inherit the features of a single superclass via single inheritance. Class A acts as a base class for the derived class B in the figure below.
+2. Multilevel Inheritance - Multilevel Inheritance: In Multilevel Inheritance, a derived class inherits from a base class, and the derived class also serves as the base class for other classes. Class A serves as a base class for derived class B, which in turn serves as a base class for derived class C in the diagram below. In Java, a class cannot directly access the members of a grandparent.
+3. Hierarchical Inheritance - One class serves as a superclass (base class) for several subclasses in Hierarchical Inheritance. Class A acts as a base class for the derived classes B, C, and D in the diagram below.
+4. Multiple Inheritance - When a class inherits from more than one class, it is referred to as multiple inheritances. The below image shows class C inheriting from classes A and B.
+
+Hybrid Inheritance - Hybrid Inheritance is a blend of two or more of the inheritance kinds listed above. The below figure shows two classes B and C inheriting from class A and a class D inheriting from both classes B and C.
+
+
+15. Java Math Class
+16. Abstract class and Interfaces
+- some key points to remember about Java abstract classes.
+An abstract class instance cannot be created.
+The use of constructors is permitted.
+There is no need for an abstract method in an abstract class.
+Final methods aren't allowed in abstract classes since they can't be overridden, but abstract methods are designed to be overridden.
+We are prohibited from creating objects for any abstract class.
+In an abstract class, we can define static methods.
+
+- Java Interfaces:-
+An interface, like a class, can include methods and variables, but the methods declared in an interface are abstract by default (only method signature, no body).
+Interfaces define what a class must do, not how it must do it.
+An interface is about capabilities; for example, a Player may be an interface, and any class that implements it must be able to (or must implement) movement (). As a result, it provides a set of methods that must be implemented by the class.
+If a class implements an interface but does not offer method bodies for all of the interface's functionalities, the class must be abstracted
+
+-  Abstract Class vs Interface:
+  The following table depicts the differences between abstract classes and interfaces in Java:
+  Abstract Class	Interface
+  Abstract and non-abstract methods can both be found in an abstract class. It can also contain default and static methods starting with Java 8.	An interface can only contain abstract methods.
+  Non-final variables can be present in abstract classes.	Variables declared in a Java interface are by default final variables.
+  Variables in an abstract class can be final, non-final, static, or non-static.	Only static and final variables are used in the interface.
+  The interface can be implemented using an abstract class.	An abstract class cannot be implemented using an interface.
+  The keyword "extends" can be used to extend an abstract class.	The keyword "implements" can be used to implement a Java interface.
+
+17. Arrays in Java
+    All arrays in Java are allocated dynamically. (explained further down)
+    Because arrays are objects in Java, we may use the object attribute length to determine their length. This differs from C/C++, where we use sizeof to find the length.
+    With [] following the data type, a Java array variable can be declared just like any other variable.
+    The array’s variables are sorted, and each has an index starting at 0.
+    An array’s size must be given using an int or short integer rather than a long number.
+    Object is the array type’s direct superclass.
+    Every array type implements the Cloneable and java.io.Serializable interfaces.
+
+18. Strings in Java
+    Strings are Objects in Java that are internally supported by a char array. Strings are immutable
+-     String Buffer vs String Builder:
+  The following table lists the differences between String Buffer and String Builder in Java:
+  String Buffer	String Builder
+  StringBuffer is thread-safe since it is synchronised. It means that two threads can’t execute the StringBuffer functions at the same time. If they call the StringBuffer function at the same time, only one of the two threads acquires the lock and executes the method. The second thread has to wait until the execution of the first thread has been completed.	StringBuilder is not thread-safe because it is not synchronised. It indicates that two threads can use StringBuilder’s methods at the same time. In this case, no thread has to wait for the execution of the other thread.
+  String Buffer is considered to be less efficient than String Builder.	String Builder is considered to be more efficient than String Buffer.
+  String Buffer was introduced in Java 1.0.	String Builder was introduced in Java 1.5.
 
 
 #### part 4
+19. Java Regex
+    Regex (short for Regular Expressions) is a Java API for defining String patterns that may be used to search, manipulate, and modify strings
 
+-    Class	Description
+    util.regex.Pattern	It is used to define patterns.
+    util.regex.Matcher	It is used to conduct match operations on text using patterns.
+    PatternSyntaxException	In a regular expression pattern, it's used to indicate a syntax problem.
+
+20. Java Exception Handling
+    Meaning of Exception: An exception is an unwelcome or unexpected occurrence that occurs during the execution of a program, i.e. at run time, and disturbs the program's usual flow of instructions.
+Error vs Exception: What is the Difference?
+An error implies that there is a major problem that a reasonable programme should not attempt to solve whereas an exception denotes a set of circumstances that a reasonable programme would attempt to catch.
+   
+- Exceptions can be divided into two categories:
+Checked Exceptions: This includes IO Exceptions and Compile time Exceptions.
+Unchecked Exceptions: This includes Runtime Exceptions and Null Pointer Exceptions.
+Built-in Exceptions in Java: Exceptions that are present in Java libraries are known as built-in exceptions. The following table lists the built-in exceptions in Java:
+
+- Java Try-Catch
+  try block: The try block comprises a set of statements that may throw an exception
+  catch block: The catch block is used to manage the try block's unclear condition. A try block is always followed by a catch block, which deals with any exceptions thrown by the try block.
+  finally keyword:- In Java, the finally block represents code that is to be executed whether or not an exception is caught
+  throw keyword:- In Java, the throw keyword is used to throw an exception from a method or any block of code. We can either throw a checked or an unchecked exception. Throwing custom exceptions is the most common use of the throw keyword.
+throws keyword:- The throws keyword is used to handle exceptions in the absence of a try/catch block. It specifies the exceptions that a method should throw in case an exception occurs.
+
+21. Java Commands
+- java –version:
+
+22. Java Collections
+The Collection interface (present in the java.util.Collection package) and the Map interface (present in the java.util.Map package) are the two basic root interfaces of Java collection classes.
+
+- The following table lists the methods present in the collection interface:
+     Method	Description
+     add(Object)	It is a method for adding an object to a collection.
+     addAll(Collection c)	This function populates this collection with all of the pieces from the provided collection.
+     clear()	This method clears the collection of all its items.
+     contains(Object o)	This method clears the collection of all its items.
+     containsAll(Collection c)	If the collection contains all of the elements in the given collection, this method returns true.
+     equals(Object o)	This method checks for equality between the specified object and this collection.
+     hashCode()	It is a method that returns the hash code value for a collection.
+     isEmpty()	It returns true if there are no elements in this collection.
+     iterator()	It returns an iterator that traverses the elements of this collection.
+     max()	The maximum value in the collection is returned by this method.
+     size()	The number of elements in the collection is returned by the size() method.
+     spliterator()	It is a function for creating a Spliterator over the elements in a collection.
+     stream()	This method returns a sequential Stream whose source is this collection.
+     toArray()	It returns an array that contains all of the elements in this collection.
+
+- Interfaces that extends the Collections interface
+  Iterable Interface: This is the collection framework’s root interface. The iterable interface is extended by the collection interface. As a result, all interfaces and classes implement this interface by default. This interface’s main purpose is to provide an iterator for the collections. As a result, this interface only has one abstract method, the iterator.
+  Collection Interface: The Collection Interface extends the iterable interface and is implemented by all of the collection framework’s classes. This interface covers all of the basic methods that every collection has, such as adding data to the collection, removing data from the collection, clearing data, and so on. All of these methods are implemented in this interface since they are used by all classes, regardless of their implementation style. Furthermore, including these methods in this interface guarantees that the method names are consistent across all collections. In summary, we may conclude that this interface lays the groundwork for the implementation of collection classes.
+  List Interface: The collection interface has a child interface called the list interface. This interface is dedicated to list data, in which we can store all of the objects in an ordered collection. This also allows for the presence of redundant data. Various classes, such as ArrayList, Vector, Stack, and others, implement this list interface. We can create a list object with any of these classes because they all implement the list.
+  Java ArrayList: In Java, ArrayList allows us to create dynamic arrays. Though it may be slower than normal arrays, it might be useful in programs that require a lot of array manipulation. If the collection increases, the size of an ArrayList is automatically increased, and if the collection shrinks, the size of an ArrayList is automatically decreased. The Java ArrayList allows us to access the list at random. Primitive types, such as int, char, and so on, cannot be utilised with ArrayList. In such circumstances, we’ll require a wrapper class.
+  Syntax -
+  ArrayList<ObjectType>name=new ArrayList<ObjectType>(size_of_collection);
+  Java LinkedList: The LinkedList class implements the LinkedList data structure, which is a linear data structure with items not stored in contiguous locations with each element being a separate object having a data and address part. Pointers and addresses are used to connect the elements. Every element is referred to as a node.
+  Syntax -
+  LinkedList<ObjectType> name = new LinkedList<ObjectType>(size_of_collection);
+  Java Vector: In Java, a vector offers us dynamic arrays. Though it may be slower than normal arrays, it might be useful in programs that require a lot of array manipulation. In terms of implementation, this is similar to ArrayList. The main distinction between a vector and an ArrayList is that a vector is synchronised (i.e., thread-safe implying that it has some sort of locking mechanism before accessing shared data), but an ArrayList is not.
+  Syntax -
+  Vector<ObjectType> name = new Vector<ObjectType>(size_of_collection);
+  Java Stack: The Stack data structure is modelled and implemented by the Stack class. The class is organised around the last-in-first-out philosophy. The class also includes three additional functions: empty, search, and peek, in addition to the fundamental push and pop operations. The subclass of Vector can also be used to refer to this class.
+  Syntax -
+  Stack<ObjectType> name = new Stack<ObjectType>(size_of_collection);
+  Queue Interface: A queue interface, as the name implies, follows the FIFO (First In First Out) order of a real-world queue line. This interface is for storing all elements in which the order of the elements is important. When we try to book a ticket, for example, the tickets are sold on a first-come, first-served basis. As a result, the individual whose request is first in line receives the ticket. PriorityQueue, ArrayDeque, and other classes are available. Because all of these subclasses implement the queue, we can use any of them to create a queue object.
+  Example -
+  Queue<ObjectType> queue = new PriorityQueue<ObjectType> ();
+  Deque Interface: This is just a little tweak to the queue data structure. Deque, also known as a double-ended queue, is a data structure in which elements can be added and removed from both ends. The queue interface is extended by this interface. ArrayDeque is the class that implements this interface. Because the ArrayDeque class implements the Deque interface, we can use it to create a deque object.
+  Example -
+  Deque<ObjectType> deque = new ArrayDeque<ObjectType> ();
+  Set Interface: A set is an unordered collection of objects in which no duplicate values can be stored. This collection is utilised when we want to avoid duplication of things and only keep the unique ones. Various classes, such as HashSet, TreeSet, LinkedHashSet, and others, implement this set interface. We can create a set object with any of these classes because they all implement the set.
+  Example -
+  Set<ObjectType> set = new HashSet<ObjectType> ();
+  SortedSet Interface: This interface resembles the set interface in appearance. The only difference is that this interface provides additional methods for maintaining element ordering. The sorted set interface is an extension of the set interface that is used to manage sorted data. TreeSet is the class that implements this interface. We can create a SortedSet object using this class because it implements the SortedSet interface.
+  Example -
+  SortedSet<ObjectType> set = new TreeSet<ObjectType> ();
+  Map Interface: A map is a data structure that allows data to be mapped into key-value pairs. Because the same key cannot have multiple mappings, this interface does not support duplicate keys. If there is data and we want to do actions based on the key, a map is beneficial. Various classes, such as HashMap and TreeMap, implement this map interface. We can create a map object with any of these classes because they all implement the map
+
+
+23. Java Generics
+    Generics refer to types that have been parameterized. The goal is to make type (Integer, String, etc., as well as user-defined types) a parameter for methods, classes, and interfaces. Generics can be used to design classes that function with a variety of data types. A generic entity is a type that works on a parameterized type, such as a class, interface, or method.
+    Type-safety: In generics, we can only hold one type of object.
+    Typecasting isn’t necessary: When we use generics, we do not need to typecast the object when we access it.
+    Checking at Compile Time: It is checked at compile time to ensure that an issue does not arise at runtime.
+
+24. Java Multithreading
+Multithreading is a Java feature that permits the execution of two or more portions of a program at the same time to maximise CPU efficiency. Each such portion of the program is referred to as a thread.
+Threads are lightweight processes within processes. Multitasking is accomplished through the use of multiprocessing and multithreading. Because threads share a memory, we employ multithreading rather than multiprocessing. They conserve memory by not allocating separate memory space, and context-switching between threads takes less time than processing.
+
+- Java Runnable Interface: In Java, java.lang.Runnable is an interface that a class must implement if its instances are to be executed by a thread.
+- Java Thread Class: Thread programming is possible with Java’s Thread class. The Thread class contains constructors and methods for creating and operating on threads. Thread is a subclass of Object that implements the Runnable interface
+
+Java Multithreading has the following advantages:
+It does not impede the user because threads are independent and can conduct many operations at the same time.
+It saves time by allowing you to conduct multiple procedures at once.
+Because threads are self-contained, an exception in one thread has no impact on other threads.
+How to implement multithreading in Java?
+
+Multithreading can be performed in Java using two different mechanisms:
+By Extending the Thread class.
+By implementing the Runnable Interface.
+
+- The following are the key differences between using the Runnable interface and the Thread class:
+Because Java doesn’t support multiple inheritances, if we extend the Thread class, we won’t be able to extend any other classes. Our class, however, can still extend other base classes if we implement the Runnable interface.
+We can obtain rudimentary thread functionality by extending the Thread class, which has several built-in methods like yield() and interrupt() that aren’t available in the Runnable interface.
+When you use runnable, you’ll get an object that can be shared by numerous threads.
 
 #### part 5
 
