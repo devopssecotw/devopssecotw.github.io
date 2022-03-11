@@ -20,6 +20,7 @@
 - mv	Renames a directory
 - apt-get / yum  Command used to install and update packages
 - ln soft link
+- tar -czvf archive.tar.gz stuff  / zip archivename.zip filename1
 ### SYSTEM INFORMATION
 
 - uname -a # Display Linux system information
