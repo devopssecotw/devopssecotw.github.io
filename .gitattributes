@@ -1,1 +1,2 @@
 *.zip.bu filter=lfs diff=lfs merge=lfs -text
+*.z.bu filter=lfs diff=lfs merge=lfs -text
