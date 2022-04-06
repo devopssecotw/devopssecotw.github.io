@@ -6,7 +6,7 @@
 - cd or cd ~	Navigate to HOME directory
 - cd ..	Move one level up |  cd	To change to a particular directory |  cd /	to the root 
 - cat > filename	Creates a new file
-- cat filename	Displays the file content
+- cat filename	Displays the file content | cat /proc/cpuinfo
 - cat file1 file2 > file3	Joins two files (file1, file2) and stores the output in a new file (file3)
 - mv file "new file path"	Moves the files to the new location
 - mv filename new_file_name	Renames the file to a new filename
