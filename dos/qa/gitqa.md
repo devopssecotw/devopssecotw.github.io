@@ -2,6 +2,13 @@
 ## Git
 ### QA
 #### p1
+- lfs
+```markdown
+git lfs install
+git lfs track "*.jpeg"
+git add .gitattributes
+```
+- 
 #### p1
 - What is Git and why is it used?
   Git is the most popular, open-source, widely used, and an example of distributed version control system (DVCS) used for handling the development of small and large projects in a more efficient and neat manner.
