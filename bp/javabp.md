@@ -26,9 +26,12 @@
 ##### Upload artifacts to Maven Central
 ##### Declare all direct dependencies
 
-#### p1
-#### p1
 
+### 
+####
+###
+####
+###
 
 
 ### references
