@@ -2,7 +2,6 @@
 ## Kafka
 ### QA
 #### p1
-#### p1
 - What is Kafka
   Apache Kafka is a streaming platform that is free and open-source. Kafka was first built at LinkedIn as a messaging queue, but it has evolved into much more. It's a versatile tool for working with data streams that may be applied to a variety of scenarios.
 
@@ -482,6 +481,9 @@ Spark Interview
 Java Interview
 
 
+#### p2 : 一文入门 Kafka
+
+
 
 
 
@@ -489,3 +491,4 @@ Java Interview
 ### references
 #### links
 - <https://www.interviewbit.com/kafka-interview-questions/>
+- <https://mp.weixin.qq.com/s/vzvmOXGcsX7rwY4J_--onw>
