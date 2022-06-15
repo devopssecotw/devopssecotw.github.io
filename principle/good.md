@@ -89,9 +89,29 @@
 ####
 
 ### root cause analysis (RCA) 根本原因分析
-####
-####
-####
+####  four steps
+- Identify and describe the problem clearly
+- Establish a timeline from the normal situation until the problem occurs.
+- Distinguish between the root cause and other causal factors (e.g., using event correlation).
+- Establish a causal graph between the root cause and the problem.
+#### 一般原则
+- 定义问题或描述事件的情况。包括有害结果的定性和定量的属性（properties），这通常包括特定的性质、大小、位置和事件发生的时间。
+- 收集数据和证据，沿着事件的“时间轴”分类直到最后导致失败或危机事件。尤其当每一个在“时间轴”列入应该做的行为、条件、动作、和无作为，不同于实际被做的情况。
+- 问“为什么”和厘清指向被定义的问题或事件顺序中每一个步骤相关联的原因。“为什么”是指“究竟是什么因素直接造成这个效果？”
+- 分类涉及一个事件顺序中的因果关系和根本原因，如果它们能被消除，就可以被认为是能中断因果链的一环。
+- 识别所有与有害因素相等或更好要求被称为“根本原因”。经常的状况是同时有多个的根本原因能清楚地揭示后续的最佳选择。
+- 对每一个有害的影响（包括结果和因素）识别出所有能确定防止复发的矫正措施，检查每项矫正措施是否能在活动开始前实施，以减少或阻止特定的有害影响。
+- 当解决方案有效时，识别此一解决方案，并与团体达成一致协议，合理地确定（含括机构的内部控制机制）可防止复发，能满足其宗旨和目标，并且不会导致或引进其他新的、不可预见的问题。
+- 实施建议的根本原因矫正措施。
+- 借由观察执行建议方案以确保其有效性。
+- 识别其他解决问题和能有效回避问题的机制。
+- 识别和处理其他每一有害的结果和有害因素的实例
+#### techniques 
+- Five whys
+- Failure mode and effects analysis (FMEA)
+- Fault tree analysis
+- Ishikawa diagram 
+- Pareto analysis
 ####
 
 

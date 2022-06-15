@@ -1,0 +1,1 @@
+AFA|Delivery note|DN|auto-transportation|documentation

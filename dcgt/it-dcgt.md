@@ -1,0 +1,1 @@
+itfa|Cascading Style Sheets (CSS)|CSS|it-web-front side|a stylesheet language used to describe the presentation of a document written in HTML or XML (including XML dialects such as SVG, MathML or XHTML)
