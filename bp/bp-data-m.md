@@ -122,5 +122,3 @@
 - <https://dzone.com/articles/10-best-practices-for-data-migration>
 - <https://www.tevora.com/blog/data-mapping-best-practices/>
 - <https://opennetworks.com/blog/data-mapping-best-practices/>
-- <>
-- <>
