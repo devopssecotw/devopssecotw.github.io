@@ -38,6 +38,16 @@ o--	Aggregation
 ..|>	Realization
 ..	Link (Dashed)
 ```
+
+```text
+To specify the visibility of a class member (i.e. any attribute or method), these notations may be placed before the member's name, but it is optional:
+
++ Public
+- Private
+# Protected
+~ Package/Internal
+```
+
 ``` text
 The different cardinality options are :
 
