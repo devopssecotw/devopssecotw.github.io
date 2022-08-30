@@ -81,6 +81,7 @@ classDiagram
     ConfigurableApplicationContext <|.. AbstractApplicationContext
 
     ApplicationStartup -- AbstractApplicationContext
+    StandardEnvironment -- AbstractApplicationContext
 
     class AbstractApplicationContext
     AbstractApplicationContext: +String MESSAGE_SOURCE_BEAN_NAME
@@ -109,7 +110,7 @@ classDiagram
     AbstractApplicationContext: +AbstractApplicationContext()
     AbstractApplicationContext: +AbstractApplicationContext(ApplicationContext parent)
     AbstractApplicationContext: +AbstractApplicationContext(ApplicationContext parent, String id)
-    AbstractApplicationContext: +void setId(String id)
+    AbstractApplicationContext: +ConfigurableEnvironment getEnvironment()
 
 
     ApplicationContext <|--ConfigurableApplicationContext
@@ -334,6 +335,18 @@ classDiagram
 ---
 ---
 
+```mermaid
+classDiagram
+
+    AbstractEnvironment <|-- StandardEnvironment
+    class StandardEnvironment
+    StandardEnvironment : +String SYSTEM_ENVIRONMENT_PROPERTY_SOURCE_NAME
+    StandardEnvironment : +String SYSTEM_PROPERTIES_PROPERTY_SOURCE_NAME
+    StandardEnvironment : +StandardEnvironment()
+    StandardEnvironment : #StandardEnvironment(MutablePropertySources propertySources)
+    StandardEnvironment : +void customizePropertySources(MutablePropertySources propertySources)
+
+```
 
 ---
 ---

@@ -10,6 +10,67 @@ erDiagram
           PRODUCT-CATEGORY ||--|{ PRODUCT : contains
           PRODUCT ||--o{ ORDER-ITEM : "ordered in"
 ```
+
+```text
+Relationship Syntax
+The relationship part of each statement can be broken down into three sub-components:
+
+the cardinality of the first entity with respect to the second,
+whether the relationship confers identity on a 'child' entity
+the cardinality of the second entity with respect to the first
+Cardinality is a property that describes how many elements of another entity can be related to the entity in question. In the above example a PROPERTY can have one or more ROOM instances associated to it, whereas a ROOM can only be associated with one PROPERTY. In each cardinality marker there are two characters. The outermost character represents a maximum value, and the innermost character represents a minimum value. The table below summarises possible cardinalities.
+
+Value (left)	Value (right)	Meaning
+|o	o|	Zero or one
+||	||	Exactly one
+}o	o{	Zero or more (no upper limit)
+}|	|{	One or more (no upper limit)
+```
+
+```text
+    CUSTOMER ||--o{ ORDER : places
+    ORDER ||--|{ LINE-ITEM : contains
+    CUSTOMER }|..|{ DELIVERY-ADDRESS : uses
+```
+```text
+erDiagram
+    CUSTOMER ||--o{ ORDER : places
+    CUSTOMER {
+        string name
+        string custNumber
+        string sector
+    }
+    ORDER ||--|{ LINE-ITEM : contains
+    ORDER {
+        int orderNumber
+        string deliveryAddress
+    }
+    LINE-ITEM {
+        string productCode
+        int quantity
+        float pricePerUnit
+    }
+```
+
+```text
+Entities and Relationships
+Mermaid syntax for ER diagrams is compatible with PlantUML, with an extension to label the relationship. Each statement consists of the following parts:
+
+    <first-entity> [<relationship> <second-entity> : <relationship-label>]
+Where:
+
+first-entity is the name of an entity. Names must begin with an alphabetic character and may also contain digits, hyphens, and underscores.
+relationship describes the way that both entities inter-relate. See below.
+second-entity is the name of the other entity.
+relationship-label describes the relationship from the perspective of the first entity.
+For example:
+
+    PROPERTY ||--|{ ROOM : contains
+```
+
+
+
+
 ---
 ---
 
@@ -177,3 +238,22 @@ pie title Pets adopted by volunteers
 
 ```
 
+---
+---
+---
+
+```mermaid
+    flowchart TB
+      subgraph one
+        a1 --> a2
+      end
+      subgraph two
+        b1 --> b2
+      end
+      subgraph three
+        c1 --> c2
+      end
+      a1 --> b1
+      b1 --> c1
+      c1 --> a1
+```

@@ -42,12 +42,21 @@ classDiagram
 classDiagram
     class ApplicationContextFactory
     ApplicationContextFactory :+DEFAULT()
+    ApplicationContextFactory :+ConfigurableApplicationContext create(WebApplicationType webApplicationType)
+    ApplicationContextFactory:ApplicationContextFactory ofContextClass(Class<?> contextClass)
+    ApplicationContextFactory :+ApplicationContextFactory of(Supplier<ConfigurableApplicationContext> supplier) 
 
     ApplicationContextFactory -- SpringFactoriesLoader
     ApplicationContextFactory -- ConfigurableApplicationContext
     ApplicationContextFactory -- AnnotationConfigApplicationContext
 ```
 
+```text
+org.springframework.boot.ApplicationContextFactory.DEFAULT
+
+```
+
+---
 
 ```mermaid
 classDiagram
